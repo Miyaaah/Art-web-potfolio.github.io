@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIMI's Art Portfolio - HOME</title> <!--Title for the page -->
+    <link rel="stylesheet" href="web.css" type="text/css">
+    
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+</head>
+<body>
+       
+<!--  Creating the navigation bar under the <nav> and <ul> tag.  -->
+   <nav>
+        <div class="logo">
+        <a href="Index.html">
+        <div class="logo-content">
+            <img src="logo2.png" alt="Logo" class="logo-img">
+            <h4>MIMI</h4>
+        </div>
+        </a>
+        </div>
+
+        <!-- Burger Icon -->
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Page links -->
+        <ul class="nav-links" id="nav-links">
+            <li><a href="About.html">About</a></li> 
+            <li><a href="Designs.html">Designs</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Personal.html">Personal Works</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    
+    <!-- Content of the page -->
+    <div class="descbox">
+        <div class="desc fade-in" >  <!--Adding transitions -->
+            <h1>Hi I'm <span class="highlight">Mimi!</span></h1>
+            <p> I’m a <span class="highlight">freelance artist</span>, who loves bringing ideas to life through illustrations. I’m all about turning concepts into visuals that really connect with people. Take a look at my art portfolio to see what I’ve been working on!</p>
+        
+            <!-- Buttons-->
+            <div class="buttons">
+                <div id="Aboutb">
+                  <h2><a href="About.html">ABOUT</a></h2>
+                </div>
+            <!-- A dropdown menu for this button-->
+                <div id="Worksb" class="dropdown-container">
+                  <h2><a href="#">WORKS</a></h2>
+                  <ul class="dropdown">
+                    <li><a href="Designs.html">Designs</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="Personal.html">Personal Works</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                  </ul>
+                </div>
+            </div>
+              
+        
+        </div>
+
+        <!-- Image -->
+        <div class="picture fade-in">
+            <img src="Me.jpg" alt="Artist's picture">
+        </div>
+    </div>
+    
+
+    <!-- Page transition script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+
+            // Function to add 'visible' class
+            function fadeInElements() {
+                fadeElements.forEach((el) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight) {
+                        el.classList.add('visible');
+                    }
+                });
+            }
+
+            // Initial fade-in on load
+            fadeInElements();
+
+            // Fade-in when user scrolls
+            window.addEventListener('scroll', fadeInElements);
+        });
+
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('nav-links');
+
+        burger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+            });
+    </script>
+   
+</body>
+</html>
