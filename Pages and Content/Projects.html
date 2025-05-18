@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIMI's Art Portfolio - PROJECTS</title> <!--Title for the page -->
+    <link rel="stylesheet" href="web2.css" type="text/css">
+    
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+       
+<!--  Creating the navigation bar under the <nav> and <ul> tag.  -->
+   <nav>
+        <div class="logo">
+        <a href="Index.html">
+        <div class="logo-content">
+            <img src="logo2.png" alt="Logo" class="logo-img">
+            <h4>MIMI</h4>
+        </div>
+        </a>
+        </div>
+
+        <!-- Burger Icon -->
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Page links -->
+        <ul class="nav-links" id="nav-links">
+            <li><a href="About.html">About</a></li> 
+            <li><a href="Designs.html">Designs</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Personal.html">Personal Works</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!--Title-->
+    <h1>PROJECTS</h1>
+
+    <!--Project content-->
+    <div class="proj-cont">
+        <div class="vidcont">
+            <!--Youtube icon and subtitle-->
+            <h3><i class="fa-brands fa-youtube"></i> Storytelling</h3>
+            <video width="720" height="405" poster="posterB.png" controls loop muted playsinline>
+                <source src="My September.mp4" type="video/mp4">
+            </video>
+            <p>A brief visual storytelling video project I completed for class.</p>
+            <!--Link-->
+            <a href="https://youtu.be/8rn99AK_VSY" class="play-button" target="_blank">Watch Here!</a>
+        </div>
+
+
+    
+        <div class="vidcont">
+            <!--Gamepad icon and subtitle-->
+            <h3><i class="fa-solid fa-gamepad"></i> Game</h3>
+            <video width="720" height="405"  poster="posterA.png" controls loop muted playsinline> <!-- Poster image for the video's thumbnail. -->
+                <source src="GOLDILOCKS AND THE 3 BEARS _ TWINE.mp4" type="video/mp4"> <!-- Video source file. -->
+            </video>
+            <p>A non-linear visual novel game project for class, featuring all artwork and code created by me.</p>
+            <!--Link-->
+            <a href="https://mi2x.itch.io/goldilocks-and-the-three-bears" class="play-button" target="_blank">Play Here!</a>
+        </div>
+
+        <div class="piccont">
+            <!--Printer icon and subtitle-->
+            <h3><i class="fa-solid fa-print"></i> Business</h3>
+            <!--Cards in one row-->
+            <div class="photocards">
+                <img src="photocrd.PNG" alt="Mizi photocard">
+                <img src="postercard.png" alt="Sua photocard">
+                <img src="postercard2.png" alt="Till photocard">
+                <img src="postercard3.png" alt="Ivan photocard">
+            </div>
+
+            <div class="showcase">
+                <img src="samp.jpg" alt="Samples of the photocards">
+                <img src="stand.jpg" alt="A picture of the event">
+            </div>
+
+            <p>For Metaverese's Foundation Day, I was asked by Aenomianly to create Alien Stage photocards in exchange for a portion of their earnings.</p>
+            <!--Link-->
+            <a href="https://www.instagram.com/aeomianly/" class="play-button" target="_blank">Visit Aeonomianly</a>
+        </div>
+    </div>
+
+
+    <script>
+        //Burger menu script where it appears if the screen changes it's size
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('nav-links');
+
+        burger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
